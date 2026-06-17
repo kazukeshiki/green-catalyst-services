@@ -78,3 +78,10 @@ Updated:
 - Updated browser tab title to: Green Catalyst Services | Renovation & Maintenance Specialist
 - Added favicon using logo icon crop
 - Added Apple touch icon
+
+
+## Contact CTA Update
+Updated:
+- Removed visible email and phone number contact cards from the website contact section
+- Added a Call Us CTA button
+- Kept WhatsApp and Email CTA buttons
