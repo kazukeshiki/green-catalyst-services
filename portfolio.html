@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <title>Portfolio | Green Catalyst Services</title>
+  <meta name="description" content="Selected project portfolio by Green Catalyst Services covering interior finishing, toilet refurbishment, drainage works, leakage rectification, swimming pool maintenance and outdoor site improvement." />
+  <meta name="author" content="Green Catalyst Services" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#009e73" />
+  <link rel="canonical" href="https://green-catalyst-services.vercel.app/portfolio.html" />
+  <meta property="og:title" content="Portfolio | Green Catalyst Services" />
+  <meta property="og:description" content="Selected project portfolio by Green Catalyst Services covering interior finishing, toilet refurbishment, drainage works, leakage rectification, swimming pool maintenance and outdoor site improvement." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:site_name" content="Green Catalyst Services" />
+  <meta property="og:url" content="https://green-catalyst-services.vercel.app/portfolio.html" />
+  <style>
+    :root {
+      --green: #009e73;
+      --teal: #00a7b5;
+      --orange: #f5a623;
+      --red: #e43d30;
+      --dark: #111827;
+      --dark-green: #073f35;
+      --soft-green: #ecfdf5;
+      --soft-teal: #e6fbfd;
+      --cream: #fbfaf7;
+      --white: #ffffff;
+      --muted: #667085;
+      --line: #e4e7ec;
+      --shadow: 0 20px 50px rgba(7, 63, 53, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: rgba(251, 250, 247, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0, 158, 115, 0.12);
+    }
+
+    .nav {
+      min-height: 96px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: 0.3px;
+    }
+
+    .brand-logo {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      object-fit: contain;
+      background: white;
+      border: 1px solid var(--line);
+      padding: 6px;
+      box-shadow: 0 12px 28px rgba(17, 24, 39, 0.09);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark-green);
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--green), var(--teal));
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(0, 158, 115, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 35px rgba(0, 158, 115, 0.26);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--dark-green);
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--green);
+      transform: translateY(-2px);
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      flex: 0 0 18px;
+    }
+
+    .btn-icon svg,
+    .floating-whatsapp svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      fill: currentColor;
+    }
+
+    .hero {
+      padding: 84px 0 64px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(0, 167, 181, 0.18), transparent 30%),
+        radial-gradient(circle at 6% 16%, rgba(245, 166, 35, 0.14), transparent 22%),
+        linear-gradient(180deg, #ffffff, var(--cream));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--soft-green);
+      color: var(--green);
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1.02;
+      letter-spacing: -2.2px;
+      color: var(--dark);
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--green), var(--teal), var(--orange));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 660px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 650px;
+    }
+
+    .trust-card {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 8px 22px rgba(17, 24, 39, 0.06);
+    }
+
+    .trust-card strong {
+      display: block;
+      color: var(--dark);
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .trust-card span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      position: relative;
+      background: var(--white);
+      padding: 22px;
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 158, 115, 0.14);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -18px -18px auto auto;
+      width: 130px;
+      height: 130px;
+      background: linear-gradient(135deg, var(--orange), var(--red));
+      border-radius: 34px;
+      z-index: -1;
+      opacity: 0.72;
+    }
+
+    .hero-image {
+      min-height: 410px;
+      border-radius: 26px;
+      background:
+        linear-gradient(to top, rgba(7, 63, 53, 0.86), rgba(7, 63, 53, 0.05)),
+        url("assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-01.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: end;
+      padding: 26px;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .hero-image h3 {
+      font-size: 28px;
+      line-height: 1.12;
+      margin-bottom: 8px;
+    }
+
+    .hero-note {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .note-item {
+      padding: 13px;
+      border-radius: 16px;
+      background: var(--soft-teal);
+      color: var(--dark-green);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      max-width: 790px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.08;
+      color: var(--dark);
+      letter-spacing: -1.2px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, rgba(0, 158, 115, 0.12), rgba(0, 167, 181, 0.12));
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      color: var(--dark);
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .about-band {
+      background:
+        radial-gradient(circle at 90% 20%, rgba(245, 166, 35, 0.22), transparent 25%),
+        linear-gradient(135deg, var(--dark-green), #0b1720);
+      color: var(--white);
+      border-radius: 34px;
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .about-band h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .about-band p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 17px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .check-list li {
+      list-style: none;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 700;
+    }
+
+    .portfolio-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .portfolio-project {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
+      transition: 0.2s ease;
+    }
+
+    .portfolio-project:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .portfolio-cover {
+      width: 100%;
+      border: 0;
+      background: #f3f4f6;
+      position: relative;
+      cursor: pointer;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .portfolio-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.28s ease;
+    }
+
+    .portfolio-project:hover .portfolio-cover img {
+      transform: scale(1.04);
+    }
+
+    .photo-count {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      background: rgba(17, 24, 39, 0.78);
+      color: white;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      backdrop-filter: blur(10px);
+    }
+
+    .portfolio-copy {
+      padding: 20px;
+    }
+
+    .portfolio-copy h3 {
+      color: var(--dark);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-copy p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .text-link {
+      border: 0;
+      background: transparent;
+      color: var(--green);
+      font-weight: 900;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0;
+    }
+
+    .gallery-section {
+      padding-top: 20px;
+    }
+
+    .gallery-group {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(17, 24, 39, 0.05);
+    }
+
+    .gallery-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .gallery-title h3 {
+      color: var(--dark);
+      font-size: 22px;
+    }
+
+    .gallery-title p {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      border: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #f3f4f6;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.25s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      padding: 22px;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.05);
+    }
+
+    .step span {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--green), var(--teal));
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .step h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(245, 166, 35, 0.25), transparent 28%),
+        linear-gradient(135deg, var(--green), var(--teal));
+      color: white;
+      border-radius: 34px;
+      padding: 54px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.08;
+      margin-bottom: 14px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.88);
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 17px;
+    }
+
+    .cta .btn-secondary { border: none; }
+
+    .cta .hero-actions {
+      max-width: 840px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+footer {
+      padding: 34px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 100;
+      background: #25D366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+      transition: 0.2s ease;
+      padding: 14px;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: none;
+      background: rgba(5, 15, 20, 0.92);
+      padding: 26px;
+    }
+
+    .modal.is-open {
+      display: grid;
+      place-items: center;
+    }
+
+    .modal-inner {
+      width: min(1100px, 100%);
+      max-height: 92vh;
+      display: grid;
+      gap: 16px;
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      color: white;
+    }
+
+    .modal-top h3 {
+      font-size: 20px;
+    }
+
+    .modal-close {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .modal-image-wrap {
+      position: relative;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      min-height: 55vh;
+    }
+
+    .modal-image {
+      max-height: 74vh;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .modal-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .modal-nav button {
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1100px) {
+      .process { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 960px) {
+      .nav { padding: 13px 0; }
+      .nav-links { display: none; }
+      .hero-grid, .about-band { grid-template-columns: 1fr; }
+      .cards, .portfolio-layout { grid-template-columns: repeat(2, 1fr); }
+      .trust-row, .hero-note, .contact-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero { padding-top: 52px; }
+      .hero-card::before { display: none; }
+      .about-band, .cta { padding: 32px; }
+    }
+
+    @media (max-width: 640px) {
+      .brand-logo {
+        width: 58px;
+        height: 58px;
+        border-radius: 15px;
+      }
+
+      .brand div span { font-size: 14px; }
+      .brand small { font-size: 9px; }
+      .cards, .portfolio-layout, .gallery-grid, .process { grid-template-columns: 1fr; }
+      .gallery-title { align-items: flex-start; flex-direction: column; }
+      .footer-grid { flex-direction: column; align-items: flex-start; }
+      .hero-image { min-height: 330px; }
+      .modal { padding: 14px; }
+    }
+  
+
+    .page-hero {
+      padding: 78px 0 48px;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(0, 167, 181, 0.14), transparent 30%),
+        radial-gradient(circle at 6% 16%, rgba(245, 166, 35, 0.12), transparent 22%),
+        linear-gradient(180deg, #ffffff, var(--cream));
+    }
+
+    .page-hero h1 {
+      max-width: 900px;
+      margin-bottom: 18px;
+    }
+
+    .page-hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .home-quick-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .quick-link-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+      transition: 0.2s ease;
+    }
+
+    .quick-link-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-link-card h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .quick-link-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .active-link {
+      color: var(--green) !important;
+    }
+
+    .mini-cta {
+      margin-top: 42px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.06);
+    }
+
+    .mini-cta h2 {
+      color: var(--dark);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .mini-cta p {
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    .service-intro-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .service-note {
+      background: var(--soft-green);
+      border: 1px solid rgba(0, 158, 115, 0.18);
+      border-radius: 24px;
+      padding: 26px;
+      color: var(--dark-green);
+      font-weight: 700;
+    }
+
+    .contact-simple {
+      max-width: 840px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-simple .hero-actions {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 960px) {
+      .home-quick-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mini-cta,
+      .service-intro-grid {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .home-quick-links {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-cta {
+        padding: 22px;
+      }
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Green Catalyst Services Home">
+        <img class="brand-logo" src="assets/green-catalyst-logo.jpg" alt="Green Catalyst Services logo">
+        <div>
+          <span>Green Catalyst Services</span>
+          <small>Driving Innovation. Delivering Results.</small>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="services.html">Services</a>
+        <a href="index.html#why">Why Us</a>
+        <a href="portfolio.html" class="active-link">Portfolio</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html" class="btn btn-primary">Get Quotation</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Selected Project Portfolio</span>
+        <h1>Completed works across renovation, repair and maintenance scopes.</h1>
+        <p>
+          Browse selected project photos covering interior finishing, toilet works, drainage,
+          leakage rectification, swimming pool maintenance and outdoor site improvement.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="portfolio-layout">
+
+          <article class="portfolio-project" data-project="spc-flooring-cabinet-installation-and-fluted">
+            <button class="portfolio-cover" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" aria-label="Open Interior Finishing, SPC Flooring &amp; Cabinetry Works gallery">
+              <img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-01.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services" loading="lazy">
+              <span class="photo-count">22 photos</span>
+            </button>
+            <div class="portfolio-copy">
+              <h3>Interior Finishing, SPC Flooring &amp; Cabinetry Works</h3>
+              <p>Interior finishing works including SPC flooring, cabinetry installation and feature wall panel finishing.</p>
+              <button class="text-link" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted">View gallery →</button>
+            </div>
+          </article>
+
+          <article class="portfolio-project" data-project="toilet-work">
+            <button class="portfolio-cover" type="button" data-open-project="toilet-work" aria-label="Open Toilet Refurbishment &amp; Repair Works gallery">
+              <img src="assets/portfolio/toilet-work/toilet-work-01.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services" loading="lazy">
+              <span class="photo-count">21 photos</span>
+            </button>
+            <div class="portfolio-copy">
+              <h3>Toilet Refurbishment &amp; Repair Works</h3>
+              <p>Toilet improvement and repair works including finishing, sanitary-related works and site touch-up.</p>
+              <button class="text-link" type="button" data-open-project="toilet-work">View gallery →</button>
+            </div>
+          </article>
+
+          <article class="portfolio-project" data-project="armani-condo-b-5-7">
+            <button class="portfolio-cover" type="button" data-open-project="armani-condo-b-5-7" aria-label="Open Condominium Bathroom &amp; Drainage Works gallery">
+              <img src="assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-01.jpg" alt="Condominium Bathroom &amp; Drainage Works by Green Catalyst Services" loading="lazy">
+              <span class="photo-count">6 photos</span>
+            </button>
+            <div class="portfolio-copy">
+              <h3>Condominium Bathroom &amp; Drainage Works</h3>
+              <p>Bathroom and drainage-related works for condominium property improvement and maintenance.</p>
+              <button class="text-link" type="button" data-open-project="armani-condo-b-5-7">View gallery →</button>
+            </div>
+          </article>
+
+          <article class="portfolio-project" data-project="swimming-pool">
+            <button class="portfolio-cover" type="button" data-open-project="swimming-pool" aria-label="Open Swimming Pool Repair &amp; Maintenance Works gallery">
+              <img src="assets/portfolio/swimming-pool/swimming-pool-01.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services" loading="lazy">
+              <span class="photo-count">10 photos</span>
+            </button>
+            <div class="portfolio-copy">
+              <h3>Swimming Pool Repair &amp; Maintenance Works</h3>
+              <p>Swimming pool repair and maintenance support including site improvement and rectification works.</p>
+              <button class="text-link" type="button" data-open-project="swimming-pool">View gallery →</button>
+            </div>
+          </article>
+
+          <article class="portfolio-project" data-project="wcb-iveco-genset-leaking">
+            <button class="portfolio-cover" type="button" data-open-project="wcb-iveco-genset-leaking" aria-label="Open Genset Area Leakage Rectification Works gallery">
+              <img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-01.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services" loading="lazy">
+              <span class="photo-count">36 photos</span>
+            </button>
+            <div class="portfolio-copy">
+              <h3>Genset Area Leakage Rectification Works</h3>
+              <p>Leakage rectification works for genset area including inspection, repair coordination and completion support.</p>
+              <button class="text-link" type="button" data-open-project="wcb-iveco-genset-leaking">View gallery →</button>
+            </div>
+          </article>
+
+          <article class="portfolio-project" data-project="dusun">
+            <button class="portfolio-cover" type="button" data-open-project="dusun" aria-label="Open Outdoor Site Improvement Works gallery">
+              <img src="assets/portfolio/dusun/dusun-01.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services" loading="lazy">
+              <span class="photo-count">34 photos</span>
+            </button>
+            <div class="portfolio-copy">
+              <h3>Outdoor Site Improvement Works</h3>
+              <p>Outdoor site improvement and repair works carried out with practical coordination and site execution.</p>
+              <button class="text-link" type="button" data-open-project="dusun">View gallery →</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-section">
+
+        <div class="gallery-group" id="gallery-spc-flooring-cabinet-installation-and-fluted">
+          <div class="gallery-title">
+            <h3>Interior Finishing, SPC Flooring &amp; Cabinetry Works</h3>
+            <p>22 project photos</p>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="0"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-01.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 1" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="1"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-02.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 2" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="2"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-03.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 3" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="3"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-04.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 4" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="4"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-05.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 5" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="5"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-06.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 6" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="6"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-07.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 7" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="spc-flooring-cabinet-installation-and-fluted" data-image-index="7"><img src="assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-08.jpg" alt="Interior Finishing, SPC Flooring &amp; Cabinetry Works by Green Catalyst Services - photo 8" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="gallery-group" id="gallery-toilet-work">
+          <div class="gallery-title">
+            <h3>Toilet Refurbishment &amp; Repair Works</h3>
+            <p>21 project photos</p>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="0"><img src="assets/portfolio/toilet-work/toilet-work-01.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 1" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="1"><img src="assets/portfolio/toilet-work/toilet-work-02.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 2" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="2"><img src="assets/portfolio/toilet-work/toilet-work-03.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 3" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="3"><img src="assets/portfolio/toilet-work/toilet-work-04.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 4" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="4"><img src="assets/portfolio/toilet-work/toilet-work-05.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 5" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="5"><img src="assets/portfolio/toilet-work/toilet-work-06.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 6" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="6"><img src="assets/portfolio/toilet-work/toilet-work-07.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 7" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="toilet-work" data-image-index="7"><img src="assets/portfolio/toilet-work/toilet-work-08.jpg" alt="Toilet Refurbishment &amp; Repair Works by Green Catalyst Services - photo 8" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="gallery-group" id="gallery-armani-condo-b-5-7">
+          <div class="gallery-title">
+            <h3>Condominium Bathroom &amp; Drainage Works</h3>
+            <p>6 project photos</p>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-open-project="armani-condo-b-5-7" data-image-index="0"><img src="assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-01.jpg" alt="Condominium Bathroom &amp; Drainage Works by Green Catalyst Services - photo 1" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="armani-condo-b-5-7" data-image-index="1"><img src="assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-02.jpg" alt="Condominium Bathroom &amp; Drainage Works by Green Catalyst Services - photo 2" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="armani-condo-b-5-7" data-image-index="2"><img src="assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-03.jpg" alt="Condominium Bathroom &amp; Drainage Works by Green Catalyst Services - photo 3" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="armani-condo-b-5-7" data-image-index="3"><img src="assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-04.jpg" alt="Condominium Bathroom &amp; Drainage Works by Green Catalyst Services - photo 4" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="armani-condo-b-5-7" data-image-index="4"><img src="assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-05.jpg" alt="Condominium Bathroom &amp; Drainage Works by Green Catalyst Services - photo 5" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="armani-condo-b-5-7" data-image-index="5"><img src="assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-06.jpg" alt="Condominium Bathroom &amp; Drainage Works by Green Catalyst Services - photo 6" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="gallery-group" id="gallery-swimming-pool">
+          <div class="gallery-title">
+            <h3>Swimming Pool Repair &amp; Maintenance Works</h3>
+            <p>10 project photos</p>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="0"><img src="assets/portfolio/swimming-pool/swimming-pool-01.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 1" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="1"><img src="assets/portfolio/swimming-pool/swimming-pool-02.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 2" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="2"><img src="assets/portfolio/swimming-pool/swimming-pool-03.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 3" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="3"><img src="assets/portfolio/swimming-pool/swimming-pool-04.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 4" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="4"><img src="assets/portfolio/swimming-pool/swimming-pool-05.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 5" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="5"><img src="assets/portfolio/swimming-pool/swimming-pool-06.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 6" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="6"><img src="assets/portfolio/swimming-pool/swimming-pool-07.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 7" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="swimming-pool" data-image-index="7"><img src="assets/portfolio/swimming-pool/swimming-pool-08.jpg" alt="Swimming Pool Repair &amp; Maintenance Works by Green Catalyst Services - photo 8" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="gallery-group" id="gallery-wcb-iveco-genset-leaking">
+          <div class="gallery-title">
+            <h3>Genset Area Leakage Rectification Works</h3>
+            <p>36 project photos</p>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="0"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-01.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 1" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="1"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-02.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 2" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="2"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-03.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 3" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="3"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-04.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 4" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="4"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-05.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 5" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="5"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-06.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 6" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="6"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-07.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 7" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="wcb-iveco-genset-leaking" data-image-index="7"><img src="assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-08.jpg" alt="Genset Area Leakage Rectification Works by Green Catalyst Services - photo 8" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="gallery-group" id="gallery-dusun">
+          <div class="gallery-title">
+            <h3>Outdoor Site Improvement Works</h3>
+            <p>34 project photos</p>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-open-project="dusun" data-image-index="0"><img src="assets/portfolio/dusun/dusun-01.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 1" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="dusun" data-image-index="1"><img src="assets/portfolio/dusun/dusun-02.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 2" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="dusun" data-image-index="2"><img src="assets/portfolio/dusun/dusun-03.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 3" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="dusun" data-image-index="3"><img src="assets/portfolio/dusun/dusun-04.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 4" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="dusun" data-image-index="4"><img src="assets/portfolio/dusun/dusun-05.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 5" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="dusun" data-image-index="5"><img src="assets/portfolio/dusun/dusun-06.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 6" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="dusun" data-image-index="6"><img src="assets/portfolio/dusun/dusun-07.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 7" loading="lazy"></button><button class="gallery-item" type="button" data-open-project="dusun" data-image-index="7"><img src="assets/portfolio/dusun/dusun-08.jpg" alt="Outdoor Site Improvement Works by Green Catalyst Services - photo 8" loading="lazy"></button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="galleryModal" aria-hidden="true">
+    <div class="modal-inner">
+      <div class="modal-top">
+        <div>
+          <h3 id="modalTitle">Project Gallery</h3>
+          <p id="modalCounter"></p>
+        </div>
+        <button class="modal-close" type="button" id="modalClose" aria-label="Close gallery">×</button>
+      </div>
+
+      <div class="modal-image-wrap">
+        <img class="modal-image" id="modalImage" src="" alt="Project photo">
+      </div>
+
+      <div class="modal-nav">
+        <button type="button" id="prevImage">← Previous</button>
+        <button type="button" id="nextImage">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <a class="floating-whatsapp" href="https://wa.me/60102117137?text=Hi%20Green%20Catalyst%2C%20I%20would%20like%20to%20request%20a%20quotation." target="_blank" rel="noopener" aria-label="Chat with Green Catalyst Services on WhatsApp">
+    <svg viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+  <path d="M19.11 17.41c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.18-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.02-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.91 2.92 4.62 4.09.64.28 1.14.45 1.53.57.64.2 1.23.17 1.7.1.52-.08 1.59-.65 1.82-1.28.23-.63.23-1.16.16-1.27-.07-.11-.25-.18-.52-.32z"></path>
+  <path d="M16.01 3.2c-7.06 0-12.79 5.73-12.79 12.79 0 2.26.59 4.47 1.72 6.42L3 29l6.79-1.78a12.77 12.77 0 0 0 6.22 1.6h.01c7.05 0 12.79-5.73 12.79-12.79 0-3.42-1.33-6.64-3.75-9.06A12.7 12.7 0 0 0 16.01 3.2zm0 23.46h-.01c-1.92 0-3.79-.52-5.42-1.49l-.39-.23-4.03 1.06 1.08-3.93-.25-.4a10.6 10.6 0 0 1-1.63-5.68c0-5.88 4.78-10.66 10.66-10.66 2.84 0 5.51 1.11 7.52 3.12a10.57 10.57 0 0 1 3.12 7.54c0 5.88-4.79 10.67-10.65 10.67z"></path>
+</svg>
+  </a>
+
+  <footer>
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Green Catalyst Services. All rights reserved.</p>
+      <p>Project Management • Renovation • Repair • Maintenance</p>
+    </div>
+  </footer>
+
+  <script>
+    const portfolioData = [{"slug": "spc-flooring-cabinet-installation-and-fluted", "title": "Interior Finishing, SPC Flooring & Cabinetry Works", "description": "Interior finishing works including SPC flooring, cabinetry installation and feature wall panel finishing.", "keywords": "SPC flooring, cabinetry, interior finishing", "count": 22, "cover": "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-01.jpg", "images": ["assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-01.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-02.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-03.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-04.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-05.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-06.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-07.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-08.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-09.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-10.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-11.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-12.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-13.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-14.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-15.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-16.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-17.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-18.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-19.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-20.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-21.jpg", "assets/portfolio/spc-flooring-cabinet-installation-and-fluted/spc-flooring-cabinet-installation-and-fluted-22.jpg"]}, {"slug": "toilet-work", "title": "Toilet Refurbishment & Repair Works", "description": "Toilet improvement and repair works including finishing, sanitary-related works and site touch-up.", "keywords": "toilet refurbishment, repair works, sanitary", "count": 21, "cover": "assets/portfolio/toilet-work/toilet-work-01.jpg", "images": ["assets/portfolio/toilet-work/toilet-work-01.jpg", "assets/portfolio/toilet-work/toilet-work-02.jpg", "assets/portfolio/toilet-work/toilet-work-03.jpg", "assets/portfolio/toilet-work/toilet-work-04.jpg", "assets/portfolio/toilet-work/toilet-work-05.jpg", "assets/portfolio/toilet-work/toilet-work-06.jpg", "assets/portfolio/toilet-work/toilet-work-07.jpg", "assets/portfolio/toilet-work/toilet-work-08.jpg", "assets/portfolio/toilet-work/toilet-work-09.jpg", "assets/portfolio/toilet-work/toilet-work-10.jpg", "assets/portfolio/toilet-work/toilet-work-11.jpg", "assets/portfolio/toilet-work/toilet-work-12.jpg", "assets/portfolio/toilet-work/toilet-work-13.jpg", "assets/portfolio/toilet-work/toilet-work-14.jpg", "assets/portfolio/toilet-work/toilet-work-15.jpg", "assets/portfolio/toilet-work/toilet-work-16.jpg", "assets/portfolio/toilet-work/toilet-work-17.jpg", "assets/portfolio/toilet-work/toilet-work-18.jpg", "assets/portfolio/toilet-work/toilet-work-19.jpg", "assets/portfolio/toilet-work/toilet-work-20.jpg", "assets/portfolio/toilet-work/toilet-work-21.jpg"]}, {"slug": "armani-condo-b-5-7", "title": "Condominium Bathroom & Drainage Works", "description": "Bathroom and drainage-related works for condominium property improvement and maintenance.", "keywords": "bathroom works, drainage, condominium maintenance", "count": 6, "cover": "assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-01.jpg", "images": ["assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-01.jpg", "assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-02.jpg", "assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-03.jpg", "assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-04.jpg", "assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-05.jpg", "assets/portfolio/armani-condo-b-5-7/armani-condo-b-5-7-06.jpg"]}, {"slug": "swimming-pool", "title": "Swimming Pool Repair & Maintenance Works", "description": "Swimming pool repair and maintenance support including site improvement and rectification works.", "keywords": "swimming pool repair, maintenance", "count": 10, "cover": "assets/portfolio/swimming-pool/swimming-pool-01.jpg", "images": ["assets/portfolio/swimming-pool/swimming-pool-01.jpg", "assets/portfolio/swimming-pool/swimming-pool-02.jpg", "assets/portfolio/swimming-pool/swimming-pool-03.jpg", "assets/portfolio/swimming-pool/swimming-pool-04.jpg", "assets/portfolio/swimming-pool/swimming-pool-05.jpg", "assets/portfolio/swimming-pool/swimming-pool-06.jpg", "assets/portfolio/swimming-pool/swimming-pool-07.jpg", "assets/portfolio/swimming-pool/swimming-pool-08.jpg", "assets/portfolio/swimming-pool/swimming-pool-09.jpg", "assets/portfolio/swimming-pool/swimming-pool-10.jpg"]}, {"slug": "wcb-iveco-genset-leaking", "title": "Genset Area Leakage Rectification Works", "description": "Leakage rectification works for genset area including inspection, repair coordination and completion support.", "keywords": "leakage rectification, genset area, maintenance", "count": 36, "cover": "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-01.jpg", "images": ["assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-01.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-02.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-03.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-04.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-05.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-06.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-07.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-08.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-09.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-10.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-11.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-12.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-13.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-14.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-15.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-16.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-17.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-18.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-19.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-20.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-21.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-22.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-23.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-24.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-25.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-26.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-27.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-28.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-29.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-30.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-31.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-32.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-33.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-34.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-35.jpg", "assets/portfolio/wcb-iveco-genset-leaking/wcb-iveco-genset-leaking-36.jpg"]}, {"slug": "dusun", "title": "Outdoor Site Improvement Works", "description": "Outdoor site improvement and repair works carried out with practical coordination and site execution.", "keywords": "outdoor works, site improvement", "count": 34, "cover": "assets/portfolio/dusun/dusun-01.jpg", "images": ["assets/portfolio/dusun/dusun-01.jpg", "assets/portfolio/dusun/dusun-02.jpg", "assets/portfolio/dusun/dusun-03.jpg", "assets/portfolio/dusun/dusun-04.jpg", "assets/portfolio/dusun/dusun-05.jpg", "assets/portfolio/dusun/dusun-06.jpg", "assets/portfolio/dusun/dusun-07.jpg", "assets/portfolio/dusun/dusun-08.jpg", "assets/portfolio/dusun/dusun-09.jpg", "assets/portfolio/dusun/dusun-10.jpg", "assets/portfolio/dusun/dusun-11.jpg", "assets/portfolio/dusun/dusun-12.jpg", "assets/portfolio/dusun/dusun-13.jpg", "assets/portfolio/dusun/dusun-14.jpg", "assets/portfolio/dusun/dusun-15.jpg", "assets/portfolio/dusun/dusun-16.jpg", "assets/portfolio/dusun/dusun-17.jpg", "assets/portfolio/dusun/dusun-18.jpg", "assets/portfolio/dusun/dusun-19.jpg", "assets/portfolio/dusun/dusun-20.jpg", "assets/portfolio/dusun/dusun-21.jpg", "assets/portfolio/dusun/dusun-22.jpg", "assets/portfolio/dusun/dusun-23.jpg", "assets/portfolio/dusun/dusun-24.jpg", "assets/portfolio/dusun/dusun-25.jpg", "assets/portfolio/dusun/dusun-26.jpg", "assets/portfolio/dusun/dusun-27.jpg", "assets/portfolio/dusun/dusun-28.jpg", "assets/portfolio/dusun/dusun-29.jpg", "assets/portfolio/dusun/dusun-30.jpg", "assets/portfolio/dusun/dusun-31.jpg", "assets/portfolio/dusun/dusun-32.jpg", "assets/portfolio/dusun/dusun-33.jpg", "assets/portfolio/dusun/dusun-34.jpg"]}];
+
+    const modal = document.getElementById("galleryModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalCounter = document.getElementById("modalCounter");
+    const modalClose = document.getElementById("modalClose");
+    const prevImage = document.getElementById("prevImage");
+    const nextImage = document.getElementById("nextImage");
+
+    let currentProject = null;
+    let currentIndex = 0;
+
+    function openGallery(slug, index = 0) {
+      currentProject = portfolioData.find(project => project.slug === slug);
+      if (!currentProject) return;
+
+      currentIndex = Number(index) || 0;
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      updateModalImage();
+    }
+
+    function closeGallery() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      modalImage.src = "";
+    }
+
+    function updateModalImage() {
+      if (!currentProject) return;
+
+      const total = currentProject.images.length;
+      if (currentIndex < 0) currentIndex = total - 1;
+      if (currentIndex >= total) currentIndex = 0;
+
+      modalImage.src = currentProject.images[currentIndex];
+      modalImage.alt = currentProject.title + " by Green Catalyst Services - photo " + (currentIndex + 1);
+      modalTitle.textContent = currentProject.title;
+      modalCounter.textContent = "Photo " + (currentIndex + 1) + " of " + total;
+    }
+
+    document.querySelectorAll("[data-open-project]").forEach(button => {
+      button.addEventListener("click", () => {
+        openGallery(button.dataset.openProject, button.dataset.imageIndex || 0);
+      });
+    });
+
+    modalClose.addEventListener("click", closeGallery);
+    prevImage.addEventListener("click", () => {
+      currentIndex -= 1;
+      updateModalImage();
+    });
+
+    nextImage.addEventListener("click", () => {
+      currentIndex += 1;
+      updateModalImage();
+    });
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeGallery();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!modal.classList.contains("is-open")) return;
+      if (event.key === "Escape") closeGallery();
+      if (event.key === "ArrowLeft") {
+        currentIndex -= 1;
+        updateModalImage();
+      }
+      if (event.key === "ArrowRight") {
+        currentIndex += 1;
+        updateModalImage();
+      }
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
