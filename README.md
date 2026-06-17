@@ -70,3 +70,11 @@ Files updated:
 - sitemap-template.xml
 
 If Vercel assigns a different project URL, replace this domain before final launch.
+
+
+## Branding Polish Update
+Updated:
+- Enlarged desktop header logo
+- Updated browser tab title to: Green Catalyst Services | Renovation & Maintenance Specialist
+- Added favicon using logo icon crop
+- Added Apple touch icon
